@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache"
+         failOnWarning="true"
+         failOnRisky="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         displayDetailsOnTestsThatTriggerWarnings="true">
+    
+    <testsuites>
+        <testsuite name="Inky Test Suite">
+            <directory>Tests</directory>
+        </testsuite>
+        
+        <testsuite name="Engine">
+            <directory>Tests/Engine</directory>
+        </testsuite>
+        
+        <testsuite name="Compilers">
+            <directory>Tests/Compilers</directory>
+        </testsuite>
+        
+        <testsuite name="Events">
+            <directory>Tests/Events</directory>
+        </testsuite>
+        
+        <testsuite name="Utilities">
+            <directory>Tests/Utilities</directory>
+        </testsuite>
+        
+        <testsuite name="Extensions">
+            <directory>Tests/Extensions</directory>
+        </testsuite>
+        
+        <testsuite name="Exception">
+            <directory>Tests/Exception</directory>
+        </testsuite>
+        
+        <testsuite name="Integration">
+            <directory>Tests/Integration</directory>
+        </testsuite>
+    </testsuites>
+    
+    <source>
+        <include>
+            <directory>Engine</directory>
+            <directory>Compilers</directory>
+            <directory>Events</directory>
+            <directory>Utilities</directory>
+            <directory>Extensions</directory>
+            <directory>Exception</directory>
+            <directory>Attributes</directory>
+        </include>
+    </source>
+    
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="display_errors" value="1"/>
+        <ini name="display_startup_errors" value="1"/>
+        <ini name="memory_limit" value="512M"/>
+    </php>
+</phpunit>

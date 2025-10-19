@@ -1,0 +1,41 @@
+{
+    "name": "flaphl/inky",
+    "description": "Flaphl templating engine, Inky, for PHP 8.2+.",
+    "type": "library",
+    "keywords": ["template", "templating", "engine", "inky", "flaphl", "php8"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jade Phyressi",
+            "email": "jade@flaphl.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5",
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flaphl\\Fridge\\Inky\\": ""
+        },
+        "classmap": [
+            "Compilers/Nodes.php"
+        ],
+        "exclude-from-classmap": ["/Tests/"]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse",
+        "cs-fix": "php-cs-fixer fix"
+    }
+}
